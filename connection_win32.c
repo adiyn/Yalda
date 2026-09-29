@@ -1,3 +1,4 @@
+#ifdef _WIN32
 /// ₍ᐢ. .ᐢ₎ ₊˚⊹
 /// @brief DisRPC is an RPC tool made in C !
 /// @author adiyn
@@ -427,3 +428,4 @@ void run(HANDLE hPipe)
     clearConsole();
     freeProcs(procs);
 }
+#endif

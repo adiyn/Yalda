@@ -6,11 +6,44 @@
 #define KNRM                                "\x1B[0m"
 #define KRED                                "\x1B[31m"                 
 
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 #include <stdbool.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <sys/un.h>
+#include <dirent.h>
+#include <termios.h>
+#include <strings.h>
 #include <stdint.h>
+#include <ctype.h>
+
+;
+#pragma pack(push, 1) 
+typedef struct PacketHeader
+{
+	uint32_t opCode;
+	uint32_t opLength;
+} PacketHeader;
+#pragma pack(pop)
+
+typedef struct {
+    char** names;
+    int count;
+    int capacity;
+} AppList;
+
+typedef struct {
+    const char* executable;
+    const char* asset;
+} AppAssetMap;
+
+void showLogo();
+void Sleep(int ms);
+int ConnectionDiscord();
+char** getProcsNames(void);
+void freeProcs(char** procs);
+bool Disconnect(int socket);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 #ifdef __linux__
