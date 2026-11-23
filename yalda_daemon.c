@@ -23,7 +23,7 @@ static HANDLE g_pipeThread = NULL;
 static HANDLE g_pollThread = NULL;
 static HANDLE g_quitEvent = NULL;
 static HANDLE g_discordPipe = NULL;
-static CRITICAL_SECTION g_stateLock;
+static CRITICAL_SECTION g_stateLock;   /* imagine having something called CreateMutex but it sucks ass so bad that u gotta create something called a CRITICAL_SECTION */
 
 static char g_activeApp[MAX_PATH] = "";
 static char g_activeCat[32] = "";
@@ -269,7 +269,7 @@ static void serve_client(HANDLE hPipe)
     }
 }
 
-/// @brief Named-pipe server thread using overlapped connects so quit events wake it.
+/// @brief Named-pipe server thread using overlapped connects so quit events wake it.  (AI used here to understand how tf CreateNamedPipeA works and wtf PIPE_ACCESS_DUPLEX means)
 static DWORD WINAPI pipe_server_thread(LPVOID arg)
 {
     (void)arg;
@@ -409,7 +409,7 @@ static LRESULT CALLBACK wnd_proc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lPar
     }
 }
 
-/// @brief GUI entry point for `yalda_daemon.exe` (no console window).
+/// @brief GUI entry point for yalda_daemon.exe (no console window).  (AI used here)
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR cmdLine, int nShow)
 {
     (void)hPrev; (void)cmdLine; (void)nShow;
