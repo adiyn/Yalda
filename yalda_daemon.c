@@ -163,7 +163,7 @@ static DWORD WINAPI music_poll_thread(LPVOID arg)
         char title[256] = "";
         getWindowTitleForExe(exeName, title, sizeof(title));
         if (title[0] == '\0' || strcmp(title, lastTitle) == 0) {
-            continue; /* same track (or window gone) — nothing to do */
+            continue; /* same track (or window gone), nothing to do */
         }
 
         clean_music_title(title);
@@ -330,7 +330,7 @@ static DWORD WINAPI pipe_server_thread(LPVOID arg)
     return 0;
 }
 
-/// @brief Launches `yalda.exe` from the daemon's own directory (shows the TUI).
+/// @brief Launches yalda.exe from the daemon's own directory (shows the TUI).
 static void launch_tui(void)
 {
     char exeDir[MAX_PATH];
