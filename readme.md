@@ -45,8 +45,7 @@ Distributed under the Apache 2.0 License. See LICENSE for more information.
 
   * adiyn
 ### AI
-  * might have tampered with stuff when i tried using it to commit for me (i wasn't gonna push everything at once smh and i sure as hell wasn't gonna use Sublime Merge)
-  * overall < 5% ai maybe in some comments, i hate the win32 API bruh
-  * unix part gonna be so easy
+  * overall < 10% ai maybe in some comments, i hate the win32 API bruh, plus it was like between 1 am and 7 am ok ? leave me alone bruh
+  * unix part gonna be so much easier
 
 # ₍ᐢ. .ᐢ₎ ₊˚⊹
