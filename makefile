@@ -1,4 +1,4 @@
-.RECIPEPREFIX = >
+.RECIPEPREFIX = > # oh teah idk why i had issues with indentation, works fine now tho
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -Wundef -Wpointer-arith -Wshadow -Wwrite-strings -Wconversion -I"./src"
