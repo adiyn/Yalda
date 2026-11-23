@@ -70,7 +70,7 @@ bool isToBeIgnored(const char* name)
     return false;
 }
 
-/// @brief EnumWindows callback collecting deduplicated visible application executable names.
+/// @brief EnumWindows callback collecting deduplicated visible application executable names. also this sh** broken kinda idk
 static BOOL CALLBACK EnumWindowsFilter(HWND hwnd, LPARAM lParam)
 {
     YaldaProcList* list = (YaldaProcList*)lParam;
@@ -262,7 +262,7 @@ static void json_escape(const char* src, char* dst, size_t dstSize)
 
 /// @brief Queries the free iTunes Search API for a track's artwork and duration,
 ///        and builds a Qobuz.com search link for the track.
-/// @return true if artwork was found (duration and link are best-effort).
+/// @return true if artwork was found (duration and link are best-effort).  (AI used here)
 bool fetchItunesMetadata(const char* queryUtf8,
                          char* outUrl, size_t outUrlSize,
                          char* outTrackUrl, size_t outTrackUrlSize,
@@ -331,7 +331,7 @@ bool fetchItunesMetadata(const char* queryUtf8,
         }
         body[total] = '\0';
 
-        /* Track duration (milliseconds) — best-effort. */
+        /* Track duration (milliseconds) — best-effort.*/
         const char* durKey = "\"trackTimeMillis\":";
         char* dur = strstr(body, durKey);
         if (dur && outDurationSec) {
