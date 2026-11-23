@@ -61,10 +61,6 @@ void freeProcs(char** procs);
 
 #ifdef __linux__
 
-/* NOTE: the Discord IPC socket path must be built at runtime from
- * getenv("XDG_RUNTIME_DIR") — a compile-time string with "$XDG_RUNTIME_DIR"
- * inside it is never expanded by the compiler or the OS. */
-
 #include <unistd.h>
 #include <sys/socket.h>
 #include <sys/un.h>
