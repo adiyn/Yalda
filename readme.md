@@ -6,8 +6,8 @@ It reads data from the window titles, grabs album art for music players, and cou
 
 ## How it works (the two .exe thing)
 
-* **yalda_daemon.exe** — the engine. Runs hidden in your system tray and does all the work (talking to Discord, fetching album art, watching window titles). Start it once, forget it exists.
-* **yalda.exe** — the window. Shows you every open app with numbers, you press a number, done. You can also just double-click the tray icon.
+* **yalda_daemon.exe** : the engine. Runs hidden in your system tray and does all the work (talking to Discord, fetching album art, watching window titles). Start it once, forget it exists.
+* **yalda.exe** : the window. Shows you every open app with numbers, you press a number, done. You can also just double-click the tray icon.
 
 ## Features
 
