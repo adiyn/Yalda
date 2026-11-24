@@ -33,7 +33,7 @@ It reads data from the window titles, grabs album art for music players, and cou
   ```
 
 ### Roadmap
- * linux version (todo)
+ * unix version (todo)
  * pause detection (todo)
  * go outside (todo)
 
@@ -45,7 +45,6 @@ Distributed under the Apache 2.0 License. See LICENSE for more information.
 
   * adiyn
 ### AI
-  * overall < 10% ai maybe in some comments, i hate the win32 API bruh, plus it was like between 1 am and 7 am ok ? leave me alone bruh
-  * unix part gonna be so much easier
+  * overall < 5% ai ? I had issues with understanding how named pipes worked and the flags, I have no idea who came up with these names but zamn...
 
 # ₍ᐢ. .ᐢ₎ ₊˚⊹
